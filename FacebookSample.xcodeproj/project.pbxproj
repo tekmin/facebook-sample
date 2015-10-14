@@ -15,6 +15,9 @@
 		456A8ED81BCE6F37003D4040 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 456A8ED61BCE6F37003D4040 /* LaunchScreen.storyboard */; };
 		456A8EE31BCE6F37003D4040 /* FacebookSampleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A8EE21BCE6F37003D4040 /* FacebookSampleTests.m */; };
 		456A8EEE1BCE6F37003D4040 /* FacebookSampleUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 456A8EED1BCE6F37003D4040 /* FacebookSampleUITests.m */; };
+		456A8F041BCE7867003D4040 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456A8F011BCE7867003D4040 /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
+		456A8F051BCE7867003D4040 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456A8F021BCE7867003D4040 /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
+		456A8F061BCE7867003D4040 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 456A8F031BCE7867003D4040 /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +54,9 @@
 		456A8EE91BCE6F37003D4040 /* FacebookSampleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FacebookSampleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		456A8EED1BCE6F37003D4040 /* FacebookSampleUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FacebookSampleUITests.m; sourceTree = "<group>"; };
 		456A8EEF1BCE6F37003D4040 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		456A8F011BCE7867003D4040 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKCoreKit.framework; path = Libraries/FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		456A8F021BCE7867003D4040 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKLoginKit.framework; path = Libraries/FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		456A8F031BCE7867003D4040 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = FBSDKShareKit.framework; path = Libraries/FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +64,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				456A8F051BCE7867003D4040 /* FBSDKLoginKit.framework in Frameworks */,
+				456A8F041BCE7867003D4040 /* FBSDKCoreKit.framework in Frameworks */,
+				456A8F061BCE7867003D4040 /* FBSDKShareKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +90,9 @@
 		456A8EBC1BCE6F37003D4040 = {
 			isa = PBXGroup;
 			children = (
+				456A8F011BCE7867003D4040 /* FBSDKCoreKit.framework */,
+				456A8F021BCE7867003D4040 /* FBSDKLoginKit.framework */,
+				456A8F031BCE7867003D4040 /* FBSDKShareKit.framework */,
 				456A8EC71BCE6F37003D4040 /* FacebookSample */,
 				456A8EE11BCE6F37003D4040 /* FacebookSampleTests */,
 				456A8EEC1BCE6F37003D4040 /* FacebookSampleUITests */,
@@ -412,6 +424,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+				);
 				INFOPLIST_FILE = FacebookSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tm.FacebookSample;
@@ -423,6 +439,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Libraries",
+				);
 				INFOPLIST_FILE = FacebookSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.tm.FacebookSample;
@@ -497,6 +517,7 @@
 				456A8EF41BCE6F37003D4040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		456A8EF51BCE6F37003D4040 /* Build configuration list for PBXNativeTarget "FacebookSampleTests" */ = {
 			isa = XCConfigurationList;
@@ -505,6 +526,7 @@
 				456A8EF71BCE6F37003D4040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		456A8EF81BCE6F37003D4040 /* Build configuration list for PBXNativeTarget "FacebookSampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -513,6 +535,7 @@
 				456A8EFA1BCE6F37003D4040 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
